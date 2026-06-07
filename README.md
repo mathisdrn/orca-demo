@@ -73,17 +73,16 @@ Install the package dependencies and set up the virtual environment:
 ```bash
 # Install dependencies and create virtual environment
 uv sync
-
-# Activate virtual environment
-source .venv/bin/activate
 ```
 
 ### 3. Launch the Orchestrator
 To launch the Dagster development server, run:
 
 ```bash
-dg dev
+# Run directly using uv (works on macOS, Linux, and Windows)
+uv run dg dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) in your browser. 
 
 From the UI, click **Materialize All** to trigger the complete end-to-end flow. The orchestrator will automatically:
