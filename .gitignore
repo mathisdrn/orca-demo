@@ -1,0 +1,43 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache / builds
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# dbt
+transformation/target/
+transformation/dbt_packages/
+transformation/dbt_modules/
+transformation/logs/
+transformation/.user.yml
+
+# Dagster
+.tmp_dagster_home*/
+*.dagster
+
+# Local data & databases
+data/dev.duckdb
+data/raw/
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment and Dagster home
+.env
+.dagster_home/

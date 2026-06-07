@@ -1,0 +1,8 @@
+olist_profile:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DBT_DATABASE_PATH', 'data/dev.duckdb') }}"
+      schema: main
+      threads: 4

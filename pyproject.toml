@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orca-demo"
+version = "0.1.0"
+description = "Olist Data Warehouse scaffold using Dagster, dbt, dlt, and DuckDB"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "dagster",
+    "dagster-webserver",
+    "dagster-dbt",
+    "dbt-duckdb",
+    "dlt[duckdb]",
+    "dlt[parquet]",
+    "pandas",
+    "requests",
+    "pyarrow",
+    "polars>=1.41.2",
+    "dagster-dg-cli>=1.13.8",
+    "streamlit",
+    "scikit-learn",
+    "joblib",
+    "altair",
+    "jupytext",
+]
+
+[tool.dagster]
+module_name = "orchestration.definitions"
+
+[tool.dg]
+directory_type = "project"
+
+[tool.dg.project]
+root_module = "orchestration"
+
+[tool.setuptools.packages.find]
+include = ["orchestration*", "ingestion*"]
